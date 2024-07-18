@@ -9,7 +9,10 @@
   padding: 1rem;
   padding-top: 12vh;
 }
-
+#projects_container a {
+  color: white;
+  text-decoration: none;
+}
 #projects_container .project_box {
   width: 500px;
   display: flex;
