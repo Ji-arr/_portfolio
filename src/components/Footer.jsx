@@ -1,11 +1,12 @@
 import React from "react";
-import "./css/Footer.css";
+import "../assets/styles/Footer.css";
 import {
   contact_infos,
   about_me,
   services,
   social_links,
-} from "./constant/footer";
+} from "../constant/footer";
+
 function Footer() {
   return (
     <footer id="portfolio_footer">
@@ -44,7 +45,7 @@ function Footer() {
         </div>
       </div>
       <div className="footer_end">
-        <p> 2020 jiar All righs reserved</p>
+        <p> © 2024 JIAR All righs reserved</p>
         <div className="social_links">
           {social_links.map((social_link, index) => {
             return (

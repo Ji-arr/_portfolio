@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { navlinks, person } from "./constant/constant";
-import "./css/Navbar.css";
+import { navlinks, person } from "../constant/constant";
+import "../assets/styles/Navbar.css";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 function NavBar() {
   const [toggle, setToggle] = useState(false);
   return (
@@ -10,11 +12,11 @@ function NavBar() {
         <h2>{person.short_name}</h2>
       </div>
       <div className="app__Navbar-links">
-        {navlinks.map((navlink) => {
+        {navlinks.map((navlink, index) => {
           return (
-            <a href="#" key={navlink} className="app__Navbar-link">
-              {navlink}
-            </a>
+            <Link to={navlink.link} key={index} className="app__Navbar-link">
+              {navlink.text}
+            </Link>
           );
         })}
       </div>
@@ -35,14 +37,14 @@ function NavBar() {
             <button onClick={() => setToggle(false)}>X</button>
             {navlinks.map((navlink) => {
               return (
-                <a
-                  href="#"
-                  key={navlink}
+                <Link
+                  to={navlink.link}
+                  key={navlink.link}
                   className="app__Navbar-link"
                   onClick={() => setToggle(false)}
                 >
-                  {navlink}
-                </a>
+                  {navlink.text}
+                </Link>
               );
             })}
           </motion.div>

@@ -1,0 +1,295 @@
+#aboutme_section {
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 0.8rem;
+  padding-top: 12vh;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
+}
+
+#aboutme_section #ask_panda {
+  box-sizing: border-box;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(41, 41, 41, 0.562);
+  position: relative;
+  overflow: hidden;
+}
+
+#aboutme_section #ask_panda #list_container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#aboutme_section #ask_panda h1 {
+  font-size: 2rem;
+  margin: 1rem;
+  padding: 0;
+}
+
+#aboutme_section #ans_panda {
+  box-sizing: border-box;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  background-color: rgba(41, 41, 41, 0.562);
+  padding: 20px;
+}
+
+#aboutme_section #ans_panda > * {
+  /* Target direct children or specific child */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+}
+
+#aboutme_section #ask_panda img {
+  width: 50%;
+  border-radius: 50%;
+  outline: 10px solid rgb(58, 58, 58);
+}
+
+/* jiar */
+#aboutme_section #ask_panda #list_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #f1f1f1;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  padding: 20px;
+  padding: 0 20px;
+  gap: 0;
+}
+
+#aboutme_section #ask_panda #list_container ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+}
+
+#aboutme_section #ask_panda #list_container li {
+  height: 2rem;
+  font-weight: 500;
+  margin: 1rem 0;
+  padding: 0.3rem 0.5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid rgba(59, 59, 59, 0.418);
+}
+
+#aboutme_section #ask_panda #list_container li:hover {
+  background-color: rgba(0, 0, 0, 0.651);
+  color: white;
+  outline: 1px solid rgba(0, 0, 0, 0.651);
+}
+
+#aboutme_section #ask_panda .animate {
+  animation: appear 0.5s ease-in-out forwards;
+  color: black;
+}
+
+#aboutme_section #ask_panda #talk {
+  animation: click_me 2s ease-in-out infinite;
+}
+
+#aboutme_section #ask_panda #talk:hover {
+  animation: none;
+}
+
+/* #aboutme_section #ans_panda .work_experience {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: black;
+}
+
+#aboutme_section #ans_panda .work_experience .work_details {
+  border: 1px solid red;
+} */
+
+@keyframes appear {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes click_me {
+  0%,
+  35%,
+  60%,
+  80%,
+  100%,
+  70%,
+  90% {
+    transform: rotate(0deg);
+  }
+  10%,
+  20%,
+  30% {
+    transform: rotate(-10deg);
+  }
+  15%,
+  25% {
+    transform: rotate(10deg);
+  }
+}
+
+@media (max-width: 800px) {
+  #aboutme_section #ask_panda #list_container {
+    justify-content: center;
+    padding: 0 20px;
+    gap: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  #aboutme_section {
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 0.8rem;
+    padding-top: 12vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #aboutme_section #ask_panda {
+    display: grid;
+    width: 100%;
+    height: 30%;
+    grid-template-columns: auto auto;
+    grid-template-rows: 50px 20px 30px;
+    gap: 1rem;
+  }
+
+  #aboutme_section #ans_panda h1 {
+    font-size: 3vw;
+  }
+
+  #aboutme_section #ask_panda p {
+    font-size: 4vw;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+
+  #aboutme_section #ask_panda button {
+    font-size: 3vw;
+    margin: 0;
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+
+  #aboutme_section #ask_panda img {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    width: 50px;
+    border-radius: 50%;
+    outline: 10px solid rgb(58, 58, 58);
+    margin: 2rem;
+  }
+
+  #aboutme_section #ask_panda h1 {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    font-size: 5vw;
+  }
+
+  #aboutme_section #ask_panda #list_container {
+    justify-content: center;
+    padding: 0 20px;
+    gap: 0;
+  }
+
+  #aboutme_section #ask_panda #list_container h2 {
+    font-size: 5vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  #aboutme_section #ask_panda #list_container ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  #aboutme_section #ask_panda #list_container li {
+    font-size: 3vw;
+    margin: 0;
+    padding: 1vw;
+  }
+
+  #aboutme_section #ask_panda #list_container button {
+    display: flex;
+    width: 5px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1px;
+  }
+
+  #aboutme_section #ans_panda {
+    width: 100%;
+    height: 70%;
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: block;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-width: 160px;
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}

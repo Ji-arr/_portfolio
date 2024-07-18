@@ -33,7 +33,12 @@ export const person = new Person(
 );
 
 // Nav Links
-export const navlinks = ["Home", "About", "Projects", "Contact"];
+export const navlinks = [
+  { text: "Home", link: "/" },
+  { text: "About", link: "/aboutme" },
+  { text: "Projects", link: "/projects" },
+  { text: "Contact", link: "/contact" },
+];
 
 // Social media Links
 export const links = {
@@ -44,12 +49,12 @@ export const links = {
 };
 
 // Floating Circles
-import plotly from "../../assets/images/plotly.png";
-import npm from "../../assets/images/npm.png";
-import sass from "../../assets/images/sass.png";
-import html5 from "../../assets/images/html5.png";
-import css3 from "../../assets/images/css.png";
-import react from "../../assets/images/react.png";
+import plotly from "../assets/images/plotly.png";
+import npm from "../assets/images/npm.png";
+import sass from "../assets/images/sass.png";
+import html5 from "../assets/images/html5.png";
+import css3 from "../assets/images/css.png";
+import react from "../assets/images/react.png";
 
 export const floatingCircles = [
   new FloatingCircle(react, "react", "-300%", "-250%", 1),

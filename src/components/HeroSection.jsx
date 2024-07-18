@@ -1,9 +1,8 @@
-import { person, floatingCircles } from "./constant/constant";
+import { person, floatingCircles } from "../constant/constant";
 import { motion } from "framer-motion";
-import jiar from "../assets/images/jiar.jpg";
 import jiar2 from "../assets/images/jiar2.jpg";
 import React from "react";
-import "./css/Hero.css";
+import "../assets/styles/Hero.css";
 
 function HeroSection() {
   const float_left = floatingCircles.slice(0, 3);
@@ -25,6 +24,7 @@ function HeroSection() {
             {float_left.map((circle, index) => {
               return (
                 <motion.div
+                  key={index}
                   animate={{ x: circle.x_destination, y: circle.y_destination }}
                   transition={{ duration: circle.duration, ease: "easeIn" }}
                   whileInView={{
@@ -54,6 +54,7 @@ function HeroSection() {
             {float_right.map((circle, index) => {
               return (
                 <motion.div
+                  key={index}
                   animate={{ x: circle.x_destination, y: circle.y_destination }}
                   transition={{ duration: circle.duration, ease: "easeIn" }}
                   whileInView={{
